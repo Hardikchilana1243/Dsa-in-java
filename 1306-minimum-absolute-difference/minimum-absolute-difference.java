@@ -9,11 +9,13 @@ class Solution {
             minn = Math.min(minn,min);
         }
         for(int i = 0; i < n - 1; i++) {
-            int min = Math.abs(nums[i] - nums[i+1]);
-            List<Integer> ans = new ArrayList<>();
-            ans.add(nums[i]);
-            ans.add(nums[i+1]);
-            if(minn == min) list.add(ans);
+            if(nums[i+1] - nums[i] == minn) {
+                
+                List<Integer> ans = new ArrayList<>();
+                ans.add(nums[i]);
+                ans.add(nums[i+1]);
+                list.add(ans);
+            }
         }
         return list;
 
