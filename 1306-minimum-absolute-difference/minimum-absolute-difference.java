@@ -11,10 +11,10 @@ class Solution {
         for(int i = 0; i < n - 1; i++) {
             if(nums[i+1] - nums[i] == minn) {
                 
-                List<Integer> ans = new ArrayList<>();
-                ans.add(nums[i]);
-                ans.add(nums[i+1]);
-                list.add(ans);
+                // List<Integer> ans = new ArrayList<>();
+                // ans.add(nums[i]);
+                // ans.add(nums[i+1]);
+                list.add(Arrays.asList(nums[i],nums[i+1]));
             }
         }
         return list;
